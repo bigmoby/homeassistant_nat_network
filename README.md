@@ -1,4 +1,4 @@
-# Accedere a Home Assistant in una rete _natted_
+# Accedere a Home Assistant in una rete di tipo ___NAT___
 
 In alcune installazioni _"non domestiche"_ di [Home Assistant](https://www.home-assistant.io/), come in impianti di telegestione di un casolare in campagna o comunque in tutte quelle situazioni in cui non si ha la disponibilità di una rete internet fissa, si fa ricorso alle classiche _"saponette"_ WIFI connesse tramite rete mobile.
 
