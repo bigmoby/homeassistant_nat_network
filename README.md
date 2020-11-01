@@ -46,25 +46,25 @@ Effettuiamo l'accesso su  ___DuckDNS___ ([https://www.duckdns.org/](https://www.
 
 Creiamoci, se non l'abbiamo già, un accesso a [Google Cloud Platform](https://cloud.google.com/) e lo colleghiamo ad un nostro account Google. Ricordo, qualora non conosceste il servizio GCP, che al momento dell'iscrizione avremo un _credito bonus_ di 300$ da poter consumare sui servizi messi a disposizione da Google. Nel processo di creazione dell'account dovremo comunque apporre gli estremi della nostra carta di credito nel caso dovessimo sforare il budget concesso o il periodo di prova (per la nostra soluzione i costi saranno ___irrisori___ ovvero prossimi ai centesimi di euro o meno).
 
-![](GCP_step1_censored.jpg)
+![](images/GCP_step1_censored.jpg)
 
 Compiliamo anche la seconda parte del wizard e concludiamo il processo di creazione dell'account su GCP.
 
 Accediamo alla sezione ___Compute Engine___:
 
-![](GCP_step2_censored.png)
+![](images/GCP_step2_censored.png)
 
 Creiamo una istanza VM chiamandola ad esempio ___homeassistantmanager___. Scegliamo l'area geografica e la zona a noi più vicina o più conveniente (verranno riportate sulla destra della pagina le previsioni di spesa). Atteniamoci inoltre alla scelta della più piccola configurazione (e dal costo minore!) ovvero ___e2-micro___ poiché a noi servirà davvero un uso minimale delle risorse:
 
-![](GCP_step3.png)
+![](images/GCP_step3.png)
 
 Useremo una distribuzione Linux Debian (versione Buster) e dovremo consentire, nella sezione firewall, il traffico HTTP e HTTPS. Procediamo con le scelte e creiamo l'istanza. 
 
-![](GCP_step4.png)
+![](images/GCP_step4.png)
 
 Terminata la fase di creazione dell'istanza avremo la seguente situazione:
 
-![](GCP_step5_censored.jpg)
+![](images/GCP_step5_censored.jpg)
 
 Accediamo tramite il link __SSH__ all'istanza creata e procediamo come _superuser_:
 
@@ -72,7 +72,7 @@ Accediamo tramite il link __SSH__ all'istanza creata e procediamo come _superuse
 $ sudo su
 ```
 
-![](GCP_step6_censored.jpg)
+![](images/GCP_step6_censored.jpg)
 
 
 ### Preparazione dell'ambiente
@@ -147,19 +147,19 @@ $ curl -L https://install.pivpn.io | bash
 
 Nel processo di installazione dobbiamo scegliere la porta __51820 UDP__ inoltre dovremo inserire il nome di dominio scelto su ___DuckDNS___ ovvero ad esempio __lamiacasadicampagnia.duckdns.org__ .
 
-![](wireguard_selection.png)
+![](images/wireguard_selection.png)
 
-![](port_selection.png)
+![](images/port_selection.png)
 
-![](dns_selection.png)
+![](images/dns_selection.png)
 
-![](ip_or_dns_censored.jpg)
+![](images/ip_or_dns_censored.jpg)
 
-![](nome_dominio_dns_censored.jpg)
+![](images/nome_dominio_dns_censored.jpg)
 
 e confermiamo il tutto.
 
-![](conferma_pivpn_censored.jpg)
+![](images/conferma_pivpn_censored.jpg)
 
 Proseguiamo il wizard confermando le opzioni di default e completiamo il processo. Al termine ci verrà richiesto di effettuare un reboot, facciamolo!
 
@@ -171,7 +171,7 @@ $ lsmod | grep "wireguard"
 
 dovrebbe, auspicatamente, apparire in lista:
 
-![](wireguard_module_list_censored.jpg)
+![](images/wireguard_module_list_censored.jpg)
 
 
 ### Redirezione delle chiamate con _rinetd_
@@ -213,7 +213,7 @@ $ pivpn add
 
 Verrà generato un file che, come verrà spiegato successivamente in questa guida, dovremo riportare sulla macchina VPN client.
 
-![](wireguard_configuration_censored.jpg)
+![](images/wireguard_configuration_censored.jpg)
 
 Il suddetto file _homeassistanthost.conf_ conterrà la chiave privata del client VPN, la chiave pubblica del nostro host VPN e gli estremi di connessione ovvero il nome del dominio da noi scelto e la porta in uso.
 
@@ -244,7 +244,7 @@ PersistentKeepalive=25
 
 In definitiva la configurazione del client VPN sarà indicativamente così:
 
-![](configurazione_client_censored.jpg)
+![](images/configurazione_client_censored.jpg)
 
 Avviamo il servizio del client ed attiviamolo in modo che ad eventuali riavvi del sistema si connetterà alla VPN in automatico:
 
