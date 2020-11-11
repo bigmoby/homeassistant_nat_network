@@ -17,7 +17,7 @@ Vi sono due possibili alternative:
 
 ## Soluzione _nerd_
 
-Se ti sei spinto fin qui nella lettura è perché hai voglia di sperimentare! ;-) Benissimo!Armati di un minimo di pazienza...si parte! 
+Se ti sei spinto fin qui nella lettura è perché hai voglia di sperimentare! ;-) Benissimo! Armati di un minimo di pazienza...si parte! 
 
 ### Prerequisiti 
 
@@ -195,7 +195,7 @@ Inseriamo questa riga nel suddetto file di configurazione di _rinet_
 0.0.0.0         80        10.6.0.2        8123
 ```
 
-Salviamo ed usciamo dall'editor di cron (CRTL+O e CRTL+X). Riavviamo il servizio:
+Salviamo ed usciamo dall'editor nano (CRTL+O e CRTL+X). Riavviamo il servizio:
 
 ```
 $ sudo service rinetd restart
