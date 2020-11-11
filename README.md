@@ -84,6 +84,12 @@ $ gcloud compute firewall-rules create wireguardrule --allow udp:51820
 $ gcloud compute firewall-rules list
 ```
 
+___ATTENZIONE___: nel caso in cui emergesse un problema di permessi mancanti per la generazione della regola del firewall, accertatevi di aver autorizzato il vostro account Google alle risorse della VM creata: eseguite il processo di autenticazione e autorizzazione:
+
+```
+$ gcloud auth login
+```
+
 Rendiamo il sistema pronto per l'installazione di WireGuard pertanto, per la compilazione del modulo del kernel, saranno chiaramente necessari gli headers, poi installeremo [___rinetd___](http://www.rinetd.com/) per effettuare il redirect delle chiamate sul dominio pubblico verso il client VPN e, per ultimo, installeremo _curl_ che ci servirà sia per invocare il servizio DuckDNS sia per eseguire l'installazione di  PiVPN: scelgo di usare questa utility poiché sono _"pigro"_ e mi risultano comodi gli script di installazione ed configurazione automatizzati. 
 
 ```
