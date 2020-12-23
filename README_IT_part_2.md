@@ -76,7 +76,7 @@ server {
 
 Non mi soffermo alla spiegazione di ogni riga di comando della configurazione poiché sia non è lo scopo di questa guida sia la documentazione di NGINX è davvero ben fatta ed esaustiva in ogni punto.
 
-Rendiamo potenzialmente attiva la suddetta configurazione creando un link simbolico dentro la directory `sites-available` e rimuoviamo il servizio di default:
+Rendiamo potenzialmente attiva la suddetta configurazione creando un link simbolico dentro la directory `sites-enabled` e rimuoviamo il servizio di default:
 
 ```
 # ln -s /etc/nginx/sites-available/lamiacasadicampagna.duckdns.org /etc/nginx/sites-enabled/lamiacasadicampagna.duckdns.org
