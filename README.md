@@ -261,6 +261,10 @@ $ sudo systemctl enable wg-quick@wg0-client
 
 Il nostro obiettivo è raggiunto: adesso il servizio _Home Assistant_ che gira su una rete _nattata_ è raggiungibile dall'esterno.
 
+## Installazione di _WireGuard_ client per Home Assistant OS (aka Hassio)
+
+Nel caso dovessi avere una installazione Home Assistant OS dai un occhio all'unico, al momento 😉, add-on disponibile per Wireguard Client: https://github.com/bigmoby/hassio-repository-addon
+
 ## Considerazioni finali
 
 La soluzione tecnica qui presentata soffrirà sicuramente di un minimo di latenza soprattutto in fase di prima connessione poiché tutto il traffico verrà ruotato sulla VPN tuttavia il servizio di _Home Assistant_ rimane assolutamente fruibile.
