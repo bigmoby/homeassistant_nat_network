@@ -152,7 +152,7 @@ I certificati appena creati dureranno 90 giorni pertanto dovremo ricordarci di r
 ed inseriamo il seguente comando al fine di tentare il rinnovo sue volte al giorno, ogni giorno (vi _sconsiglio_ di tentare un approccio più conservativo come lo scheduling settimanale o addirittura mensile): 
 
 ```
-22 11,23 * * * certbot renew --pre-hook "service nginx stop" --post-hook "service nginx start"
+22 11,23 * * * certbot renew --nginx --pre-hook "service nginx stop" --post-hook "service nginx start"
 ```
 
 Salviamo e usciamo da nano (CRTL+O e CRTL+X).
