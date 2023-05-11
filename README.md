@@ -214,7 +214,7 @@ Adesso tutte le richieste inoltrate verso il dominio _lamiacasadicampagna.duckdn
 Creiamo una configurazione per il client che girerà sulla nostra piattaforma in cui risiede _Home Assistant_ e scegliamo il nome _homeassistanthost_:
 
 ```
-$ pivpn add 
+$ pivpn wg add 
 ```
 
 Verrà generato un file che, come verrà spiegato successivamente in questa guida, dovremo riportare sulla macchina VPN client.
